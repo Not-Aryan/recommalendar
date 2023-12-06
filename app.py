@@ -22,6 +22,12 @@ client = OpenAI()
 app = Flask(__name__)
 CORS(app)
 
+cors = CORS(app, resource={
+    r"/*":{
+        "origins":"*"
+    }
+})
+
 @app.after_request
 def add_header(response):
     response.headers['Access-Control-Allow-Origin'] = '*'
