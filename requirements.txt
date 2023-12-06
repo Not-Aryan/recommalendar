@@ -21,6 +21,7 @@ Flask
 Flask-Cors
 fonttools
 future
+gunicorn
 google
 google-api-core
 google-api-python-client
