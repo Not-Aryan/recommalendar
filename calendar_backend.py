@@ -409,6 +409,10 @@ def create_event_and_invite_user(email, internal_event_repr):
 #     elif inp_string.strip().lower() == "n":
 #         print("Event skipped, moving on.")
 
+@app.route('/hello-world', methods=['POST'])
+def hello_world():
+    return jsonify({'text': "hello world"})
+
 @app.route('/process-text', methods=['POST'])
 def process_text():
     if not request.json or 'text' not in request.json: # Check if text is sent via JSON
