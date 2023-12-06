@@ -20,7 +20,7 @@ from googleapiclient.errors import HttpError
 
 client = OpenAI()
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 def split_list(arr, num_per_arr=50):
     """
