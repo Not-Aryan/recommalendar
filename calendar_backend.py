@@ -409,7 +409,7 @@ def create_event_and_invite_user(email, internal_event_repr):
 #     elif inp_string.strip().lower() == "n":
 #         print("Event skipped, moving on.")
 
-@app.route('/hello-world', methods=['POST'])
+@app.route('/hello-world', methods=['GET'])
 def hello_world():
     return jsonify({'text': "hello world"})
 
